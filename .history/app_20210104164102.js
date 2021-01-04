@@ -44,7 +44,7 @@ class App {
     this.visual.show(this.stageWidth, this.stageHeight, this.stage);
   }
 
-  animate(t) {
+  animate() {
     requestAnimationFrame(this.animate.bind(this));
 
     this.visual.animate();

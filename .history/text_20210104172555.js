@@ -20,7 +20,7 @@ export class Text {
 
     this.ctx.clearRect(0, 0, stageWidth, stageHeight);
     this.ctx.font = `${fontWidth} ${fontSize}px ${fontName}`;
-    this.ctx.fillStyle = `rgba(0, 0, 0, 0.2`;
+    this.ctx.fillStyle = `rgba(0, 0, 0, 0.3)`;
     this.ctx.textBaseline = `middle`;
     const fontPos = this.ctx.measureText(myText);
     this.ctx.fillText(

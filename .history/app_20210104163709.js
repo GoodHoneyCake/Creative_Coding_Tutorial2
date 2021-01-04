@@ -41,13 +41,11 @@ class App {
 
     this.renderer.resize(this.stageWidth, this.stageHeight);
 
-    this.visual.show(this.stageWidth, this.stageHeight, this.stage);
+    this.visual.show(this.stageWidth, this.stageHeight, this.stageHeight);
   }
 
-  animate(t) {
+  animate() {
     requestAnimationFrame(this.animate.bind(this));
-
-    this.visual.animate();
 
     this.renderer.render(this.stage);
   }

@@ -47,7 +47,7 @@ export class Visual {
     for (let i = 0; i < this.particles.length; i++) {
       const item = this.particles[i];
       const dx = this.mouse.x - item.x;
-      const dy = this.mouse.y - item.y;
+      const dy = (this.mouse.y = item.y);
       const dist = Math.sqrt(dx * dx + dy * dy);
       const minDist = item.radius + this.mouse.radius;
 

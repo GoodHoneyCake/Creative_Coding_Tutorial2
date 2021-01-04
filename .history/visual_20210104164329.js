@@ -21,8 +21,7 @@ export class Visual {
     if (this.container) {
       stage.removeChild(this.container);
     }
-
-    this.pos = this.text.setText("M", 2, stageWidth, stageHeight);
+    this.pos = this.text.setText("T", 2, stageWidth, stageHeight);
 
     this.container = new PIXI.ParticleContainer(this.pos.length, {
       vertices: false,
@@ -30,7 +29,7 @@ export class Visual {
       rotation: false,
       scale: false,
       uvs: false,
-      tint: true,
+      tint: false,
     });
 
     stage.addChild(this.container);

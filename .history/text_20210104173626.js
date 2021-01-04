@@ -26,9 +26,8 @@ export class Text {
     this.ctx.fillText(
       myText,
       (stageWidth - fontPos.width) / 2,
-      fontPos.actualBoundingBoxAscent +
-        fontPos.actualBoundingBoxDescent +
-        (stageHeight - fontSize) / 2
+      fontPos.actualBoundingBoxAscent + fontPos.actualBoundingBoxDescent,
+      (stageHeight - fontSize) / 2
     );
     return this.dotPos(density, stageWidth, stageHeight);
   }
