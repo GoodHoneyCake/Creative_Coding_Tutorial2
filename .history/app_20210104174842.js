@@ -20,7 +20,7 @@ class App {
   }
 
   setWebgl() {
-    this.renderer = new PIXI.Renderer({
+    this.renderer = PIXI.Renderer({
       width: document.body.clientWidth,
       height: document.body.clientHeight,
       antialias: true,
@@ -28,7 +28,7 @@ class App {
       resolution: window.devicePixelRatio > 1 ? 2 : 1,
       autoDensity: true,
       powerPreference: "high-performance",
-      backgroundColor: 0x000000,
+      backgroundColor: 0xffffff,
     });
     document.body.appendChild(this.renderer.view);
 

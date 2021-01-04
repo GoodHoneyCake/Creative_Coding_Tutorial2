@@ -22,7 +22,7 @@ export class Visual {
       stage.removeChild(this.container);
     }
 
-    this.pos = this.text.setText("T", 2, stageWidth, stageHeight);
+    this.pos = this.text.setText("M", 2, stageWidth, stageHeight);
 
     this.container = new PIXI.ParticleContainer(this.pos.length, {
       vertices: false,
@@ -54,7 +54,7 @@ export class Visual {
       if (dist < minDist) {
         const angle = Math.atan2(dy, dx);
         const tx = item.x + Math.cos(angle) * minDist;
-        const ty = item.y + Math.sin(angle) * minDist;
+        const ty = item.y + Math.sign(angle) * minDist;
         const ax = tx - this.mouse.x;
         const ay = ty - this.mouse.y;
         item.vx -= ax;
