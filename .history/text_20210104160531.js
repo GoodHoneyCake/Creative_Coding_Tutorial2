@@ -1,17 +1,16 @@
 export class Text {
   constructor() {
     this.canvas = document.createElement("canvas");
-    // this.canvas.style.position = "absolute";
-    // this.canvas.style.left = "0";
-    // this.canvas.style.top = "0";
-    // document.body.appendChild(this.canvas);
+    this.canvas.style.position = "absolute";
+    this.canvas.style.left = "0";
+    this.canvas.style.top = "0";
+    document.body.appendChild(this.canvas);
 
     this.ctx = this.canvas.getContext("2d");
   }
-
   setText(str, density, stageWidth, stageHeight) {
-    this.canvas.width = stageWidth;
-    this.canvas.height = stageHeight;
+    this.canvas.width = this.stageWidth;
+    this.canvas.height = this.stageHeight;
 
     const myText = str;
     const fontWidth = 700;
@@ -32,6 +31,7 @@ export class Text {
     );
     return this.dotPos(density, stageWidth, stageHeight);
   }
+
   dotPos(density, stageWidth, stageHeight) {
     const imageData = this.ctx.getImageData(0, 0, stageWidth, stageHeight).data;
 
@@ -56,7 +56,10 @@ export class Text {
           height > 0 &&
           height < stageHeight
         ) {
-          particles.push({ x: width, y: height });
+          particles.push({
+            x: width,
+            y: height,
+          });
         }
       }
     }

@@ -24,7 +24,7 @@ class App {
       resolution: window.devicePixelRatio > 1 ? 2 : 1,
       autoDensity: true,
       powerPreference: "high-performance",
-      backgroundColor: 0xffffff,
+      backgroundColor: 0xff4338,
     });
     document.body.appendChild(this.renderer.view);
 

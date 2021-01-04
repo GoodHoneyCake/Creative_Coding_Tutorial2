@@ -7,7 +7,7 @@ class App {
         families: ["Hind:700"],
       },
       fontactive: () => {
-        window.addEventListener("resize", this.resize.bind(this), false);
+        window.addEventListener("resize", this.resize.bind(this), fasle);
         this.resize();
 
         requestAnimationFrame(this.animate.bind(this));
@@ -24,7 +24,7 @@ class App {
       resolution: window.devicePixelRatio > 1 ? 2 : 1,
       autoDensity: true,
       powerPreference: "high-performance",
-      backgroundColor: 0xffffff,
+      backgroundColor: 0xff4338,
     });
     document.body.appendChild(this.renderer.view);
 
